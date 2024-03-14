@@ -1,0 +1,44 @@
+<html>
+<head>
+  <script type="text/javascript"
+      src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js">
+  </script>
+</head>
+<body style="color: white">
+  <br></br>
+  <div id="my_menu" align="right">
+    <a href="#">INICIO</a> | <a href="#">PROGRAMA GENERAL</a> | <a href="#">CONFERENCIAS</a>
+  </div>
+  <div id="message" align="center" bgcolor="white">
+    <h4>Demo Matematicas 3.0</h4>
+  </div>
+  <div id="my_canvas" align="center">
+    <canvas id="myCanvas" width="500" height="500"></canvas>
+  </div>
+  <script>
+    var canvas = document.getElementById('myCanvas');
+    var ctx = canvas.getContext('2d');
+    const context = cast.framework.CastReceiverContext.getInstance();
+    context.addCustomMessageListener('urn:x-cast:ch.cimnine.cromecast-test.text', function (customEvent) {
+      if (customEvent.data.type == "message") {
+        document.getElementById("message").innerHTML = customEvent.data.text;
+      }
+    });
+        //console.log(ctx);
+        // the triangle
+        ctx.beginPath();
+        ctx.moveTo(100, 100);
+        ctx.lineTo(100, 300);
+        ctx.lineTo(300, 300);
+        ctx.closePath();
+        // the outline
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = '#666666';
+        ctx.stroke();
+        // the fill color
+        ctx.fillStyle = "#FFCC00";
+        ctx.fill();
+    context.start();
+  </script>
+</body>
+</html>
