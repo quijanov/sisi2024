@@ -1,12 +1,12 @@
 cff-version: 1.2.0
-message: "Sí te gusto este software, favor de citarlo asi"
+message: "Sí te gusto esta app, favor de citarla así"
 authors:
   - family-names: Quijano-Aban
     given-names: Victor Manuel
     orcid: https://orcid.org/0000-0002-6192-0797
 title: "Matematicas 3.0 app"
-version: 3.0.4
+version: 3.0.5
 identifiers:
   - type: doi
     value:  10.35429/jsem.2020.20.7.26.32
-date-released: 2024-03-13
+date-released: 2024-11-06
